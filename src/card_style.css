@@ -1,0 +1,91 @@
+/* Container for all cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: space-around start; /* Center align cards horizontally */
+  padding: 20px; /* Padding around the container */
+}
+
+/* Individual card styling */
+.card {
+  background-color: #fff; /* White background for cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for normal state */
+  overflow: hidden; /* Hide overflow to maintain card shape */
+  width: 300px; /* Fixed width for cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* Card image styling */
+.card_img {
+  overflow: hidden; /* Ensures image fits within card */
+  height: 180px; /* Fixed height for image container */
+}
+
+.card_img img {
+  width: 100%; /* Make image full-width of container */
+  height: 100%; /* Make image full-height of container */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+/* Card content styling */
+.card_content {
+  padding: 16px; /* Padding inside card */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%); /* Gradient background for content */
+  border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+}
+
+.card_content p {
+  margin: 4px 0; /* Reduced margin between paragraphs */
+  font-size: 16px; /* Slightly larger font size */
+  color: #444; /* Darker color for text */
+}
+
+.card_content p span {
+  font-weight: bold; /* Bold labels */
+  color: #007bff; /* Highlighted color for labels */
+}
+
+/* Form styling */
+.card_form {
+  margin-top: 8px; /* Space above the form */
+  display: flex;
+  flex-direction: column; /* Stack inputs and button vertically */
+}
+
+.card_form input[type="number"],
+.card_form input[type="date"] {
+  width: 100%; /* Full-width inputs */
+  margin-bottom: 8px; /* Space between input fields */
+  padding: 8px; /* Padding inside input fields */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 14px; /* Font size for input text */
+  background-color: #fafafa; /* Light background for inputs */
+}
+
+.card_form button {
+  padding: 10px; /* Padding inside button */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* White text */
+  font-size: 14px; /* Font size for button text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.card_form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Fancy hover effect */
+.card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}

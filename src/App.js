@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Registration from './components/Registration';
+import Login from './components/Login';
+import AddCar from './components/AddCar';
+import AvailableCars from './components/AvailableCars';
+import BookedCars from './components/BookedCars';
+import  {AuthProvider}  from './context/AuthContext.js';
+import EditCar from './components/EditCar'
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <div>
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<AvailableCars />} />
+              <Route path="/register/:userType" element={<Registration />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/add-car" element={<AddCar />} />
+              <Route path="/booked-cars" element={<BookedCars />} />
+              <Route path="/edit/:carid" element={<EditCar />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </AuthProvider>
   );
-}
+};
 
 export default App;
