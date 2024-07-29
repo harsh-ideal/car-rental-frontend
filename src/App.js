@@ -9,6 +9,7 @@ import AvailableCars from './components/AvailableCars';
 import BookedCars from './components/BookedCars';
 import  {AuthProvider}  from './context/AuthContext.js';
 import EditCar from './components/EditCar'
+import MyBooking from './components/MyBooking.js';
 const App = () => {
   return (
     <AuthProvider>
@@ -23,6 +24,7 @@ const App = () => {
               <Route path="/add-car" element={<AddCar />} />
               <Route path="/booked-cars" element={<BookedCars />} />
               <Route path="/edit/:carid" element={<EditCar />} />
+              <Route path="/myBooking" element={<MyBooking />} />
             </Routes>
           </main>
           <Footer />

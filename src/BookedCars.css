@@ -1,0 +1,30 @@
+.header {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .car-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booking-container {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+  
+  .field-label {
+    font-weight: bold;
+  }
+  
