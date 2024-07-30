@@ -21,8 +21,10 @@ const footerStyle = {
   color: '#61dafb', // React's default light text color
   padding: '20px',
   textAlign: 'center',
-  position: 'absolute',
+  position: 'relative',
   bottom: '0',
+  height: '100px',
+  marginTop: '-100px',
   borderRadius:'3px 3px ',
   width: '100%',
 };
