@@ -103,7 +103,7 @@ form button {
 main {
   flex: 1;
   padding: 20px;
-  min-height: 67vh;
+  min-height: 80vh;
 }
 
 header{
